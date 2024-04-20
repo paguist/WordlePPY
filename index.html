@@ -1,16 +1,36 @@
 <!DOCTYPE html>
- <html>
-   <head>
-     <title>Wordle PPY</title>
-     <script src="script.js" defer></script>
-     <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-     <h1>Wordle PPY</h1>
-     <input type="text" id="guess-input">
-     <button id="guess-button">Intentar</button>
-     <div id="grid"></div>
-     <p id="guesses">
-     </p>
-   </body>
- </html>
+<html>
+
+<head>
+  <title>Wordle PPY</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="Content-Type" content="text/html; charset= " UTF-8" />
+</head>
+
+<body>
+  <h1>Wordle</h1>
+  <h2> Programando Paraguay</h2>
+
+  <div id="contenedor">
+    <div id="reglas">
+      <h3>Reglas:</h3>
+      <ul>
+        <li>Tienes 6 oportunidades. Úsalas sabiamente!</li>
+        <li>Si la letra se pinta de verde: letra correcta en lugar correcto.</li>
+        <li>Si la letra se pinta de amarillo: letra correcta, lugar incorrecto.</li>
+        <li>Si la letra se pinta de gris, la letra no existe en la palabra.</li>
+      </ul>
+    </div>
+    <div id="contenido">
+    <div id=boton>
+      <input type="text" id="guess-input">
+      <button id="guess-button">Intentar</button>
+      <div id="grid"></div>
+      <p id="guesses"></p>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

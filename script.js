@@ -16,21 +16,15 @@ function intentar(){
     const INTENTO = document.getElementById("guess-input").value.toUpperCase()
     intentos --
     if (intentos== 0 ){
-        terminar ("PERDISTE!")
-    } 
-    if (palabraOculta == INTENTO){
-        terminar ("GANASTE!")
-        
+        terminar("PERDISTE!")
     }else{
         let fila = document.createElement("div")
         fila.className = "row"
-        console.log(fila)
         for (const i in INTENTO){
             let letra = document.createElement("span")
             letra.className = "letter"
             letra.innerText = INTENTO [i]
             fila.appendChild(letra)
-            console.log(fila)
             if (INTENTO[i] == palabraOculta[i]){
                 letra.style.background = "#59D978"
             }else if (palabraOculta.includes(INTENTO[i])){
@@ -41,6 +35,9 @@ function intentar(){
         }
     let grilla = document.getElementById("grid")
     grilla.appendChild(fila)
+    if (palabraOculta == INTENTO){
+        terminar("GANASTE!")   
+    }
 }
 
 function terminar(mensaje){
